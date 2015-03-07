@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>CPP-Pickup | Feedback</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+  <script type="text/javascript" src="js/switchery.min.js"></script>
+   <script type="text/javascript">
+function goHome(){
+  window.location.href = "./index.html";
+
+}
+function check(){
+        var inputName = document.getElementById("name").value;
+		var inputEmail = document.getElementById("email").value;
+		var inputMessage = document.getElementById("message").value;
+  
+  if(inputName.trim() == "")
+	{
+     alert("Please Enter your name!")  
+     return;
+	}
+	  
+ else if(inputEmail.trim() == "")
+	{
+     alert("Please Enter your Email!")  
+     return;
+	}
+	  
+  else if(inputMessage.trim() == "")
+	{
+     alert("Please Enter your Feedback message!")  
+     return;
+	}
+  else {
+  window.location.href = "./index.html";
+}
+
+}
+
+
+</script>
+</head>
+
+<body  background="Pomona_Campus.jpg">>
+  <div id="wrapper">
+  
+  <h1>C~P~Pickup <br> Your Feedback is highly appreciated !</h1>
+  
+  <form onsubmit="return false">
+ 
+  <div class="col-2">
+  <label>
+      Name
+      <input placeholder="Enter a name" id="name" name="name" tabindex="1">
+    </label>
+  </div>
+  
+ <div class="col-2">
+  <label>
+      Email
+      <input placeholder="Enter your Email" id="email" name="email" tabindex="2">
+    </label>
+  </div>
+  
+ 
+  <div >
+    <label>
+      Feedback Message 
+        <br><br>   <textarea id="message" rows="10" cols="100"></textarea>
+    </label>
+  </div>
+ 
+  
+  <div class="col-submit">
+    <button class="submitbtn" onclick="check()">Submit </button>
+  </div>
+   <div class="col-submit">
+    
+    <button class="submitbtn" type="button" onclick="goHome()">Back To Menu </button>
+   
+  </div>
+
+  </form>
+  </div>
+<script type="text/javascript">
+var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+elems.forEach(function(html) {
+  var switchery = new Switchery(html);
+});
+</script>
+</body>
+</html>
